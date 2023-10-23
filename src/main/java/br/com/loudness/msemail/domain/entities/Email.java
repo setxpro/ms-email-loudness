@@ -29,7 +29,8 @@ public class Email implements Serializable {
     private String emailFrom;
     private String emailTo;
     private String subject;
-    @Column(columnDefinition = "TEXT") // envia mais caracteres no caso... mais do que 255
+    
+    @Lob // envia mais caracteres no caso... mais do que 255
     private String text;
     private LocalDateTime sendDateEmail;
     private Status statusEmail;
